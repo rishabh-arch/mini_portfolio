@@ -1,0 +1,138 @@
+#rubikCube {
+    transform: scale(0.1);
+    visibility: hidden;
+    position: absolute;
+    /* top: 10rem; */
+    top: 0;
+    backdrop-filter: blur(5px);
+
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s;
+    z-index: 99;
+}
+
+#toggle_label {
+    /* border: 2px solid white; */
+    position: absolute;
+    visibility: hidden;
+    z-index: 4444;
+    padding: 20px;
+    /* text-align: right; */
+    color: white;
+    right: 0;
+    font-size: 2em;
+}
+
+input[id=toggle]:checked~#rubikCube {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.575);
+    transform: scale(1.2);
+}
+
+#wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+
+.box-area {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 3s linear infinite;
+
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate3d(0, 0, 0, 0);
+    }
+    
+    100% {
+        transform: rotate3d(1, 1, 0, 360deg);
+        ;
+    }
+}
+
+.box {
+    
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #262626;
+}
+
+
+.grid-container {
+    
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+    'one two three';
+    grid-gap: 0px;
+    padding: 0px;
+    
+}
+
+.grid-container>div {
+    border: 5px solid rgb(10, 10, 10);
+    border-radius: 5px;
+    text-align: center;
+    padding: 0;
+    font-size: 30px;
+}
+
+.bg-back {
+    background: rgb(255, 255, 255);
+    
+}
+.bg-right {
+    background: rgb(100, 5, 5);
+
+}
+
+.bg-left {
+    background: rgb(100, 5, 5);
+
+
+}
+
+.bg-top {
+    background: rgb(100, 5, 5);
+
+}
+
+.bg-bottom {
+
+    background: rgb(100, 5, 5);
+
+}
+
+.bg-front {
+    background: rgb(255, 255, 255);
+}
+
+#box-back {
+    transform: translateX(-100px) translateY(-100px) translateZ(-100px);
+}
+
+#box-right {
+    transform: translateY(-100px) rotateY(90deg);
+}
+
+#box-left {
+    transform: translateY(-100px) translateX(-200px) rotateY(90deg);
+}
+
+#box-top {
+    transform: translateX(-100px) translateY(-200px) rotateX(90deg);
+}
+
+#box-bottom {
+    transform: translateX(-100px) rotateX(90deg);
+}
+
+#box-front {
+    transform: translateX(-100px) translateY(-100px) translateZ(100px);
+}

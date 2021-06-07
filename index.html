@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <link rel="shortcut icon" type="image/jpg" href="dali.ico" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="listStyle.css">
+    <link rel="stylesheet" href="rubikCube.css">
+    <title>Portfolio</title>
+
+</head>
+
+<body>
+    <div id="Navbar" style="color: white;">
+        <a id="profile" class="page-link" ondblclick="skill2()" onclick="skill(this.id)">
+            Profile
+            <div class="link_bottom">________</div>
+        </a>
+        <a id="skill" onclick="skill(this.id)" class="page-link">
+            Skills
+            <div class="link_bottom">________</div>
+        </a>
+        <a id="contact" class="page-link" onclick="skill(this.id)">
+            Contact
+            <div class="link_bottom">________</div>
+        </a>
+        <a id="projects" class="page-link" onclick="skill(this.id)">
+            Projects
+            <div class="link_bottom">________</div>
+
+        </a>
+
+
+    </div>
+
+
+    <div id="nav_bottom">
+        <div id="nav_bt_shape"></div>
+
+    </div>
+
+
+
+
+    <div id="buddha_svg" class="buddha_svg_top">
+        <img id="mask" src="Svgs/Mask2.svg">
+        <div id="mask_eye_ball">
+            <div class="mask_eye">
+
+            </div>
+        </div>
+        <div id="mask_eye_ball2">
+            <div class="mask_eye">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="buddha_moonlight_svg">
+                        <img src="Svgs/undraw_moonlight_5ksn.svg">
+                    </div> -->
+
+    <!-- content-->
+    <div id="listContent" class="listStyle container">
+
+        <div class="right">
+            <input type="checkbox" name="features1" id="profile_input" value="premium">
+            <ul class="featured" id="profile_ul">
+                <li class="liC" onclick="toggleCheck()" style="--index: 0;">Rubik Cube</li>
+                <li class="liC" style="--index: 1;">Pixel Board</li>
+                <li class="liC" style="--index: 2;">Arduino IOTs</li>
+                <li class="liC" style="--index: 3;">RPI projects</li>
+                <li class="liC" style="--index: 4;">many more</li>
+            </ul>
+        </div>
+    </div>
+    <div id="listContent" class="listStyle container">
+
+        <div class="right">
+            <input type="checkbox" name="features1" id="skill_input" value="premium">
+            <ul class="featured" id="skill_ul">
+                <li class="liC" style="--index: 2;">Arduino IOTs</li>
+                <li class="liC" style="--index: 3;">RPI projects</li>
+                <li class="liC" style="--index: 4;">many more</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="listContent" class="listStyle container">
+
+        <div class="right">
+            <input type="checkbox" name="features1" id="contact_input" value="premium">
+            <ul class="featured" id="contact_ul">
+                <li class="liC" style="--index: 0;">Eccomerce Website</li>
+                <li class="liC" style="--index: 1;">Covid Website</li>
+                <li class="liC" style="--index: 2;">Arduino IOTs</li>
+                <li class="liC" style="--index: 3;">RPI projects</li>
+                <li class="liC" style="--index: 4;">many more</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="listContent" class="listStyle container">
+
+        <div class="right">
+            <input type="checkbox" name="features1" id="projects_input" value="premium">
+            <ul class="featured" id="projects_ul">
+                <li class="liC" style="--index: 2;">Arduino IOTs</li>
+                <li class="liC" style="--index: 3;">RPI projects</li>
+                <li class="liC" style="--index: 4;">many more</li>
+            </ul>
+        </div>
+
+    </div>
+    <div id="rubik">
+        <input type="checkbox" name="" id="toggle">
+        <label for="toggle" id="toggle_label" onclick="toggleUnChecked()">X</label>
+        <div id="rubikCube">
+            <div id="wrapper">
+                <div class="box-area">
+                    <div id="box-front" class="box">
+                        <div class="grid-container bg-front">
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                        </div>
+                    </div>
+                    <div id="box-right" class="box">
+                        <div class="grid-container bg-right">
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                        </div>
+                    </div>
+
+                    <div id="box-back" class="box">
+                        <div class="grid-container bg-back">
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item "></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                        </div>
+                    </div>
+                    <div id="box-left" class="box">
+                        <div class="grid-container bg-left">
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                        </div>
+                    </div>
+                    <div id="box-top" class="box">
+                        <div class="grid-container bg-top">
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                        </div>
+                    </div>
+                    <div id="box-bottom" class="box">
+                        <div class="grid-container bg-bottom">
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <h2 id="mid_header">SVG WEBPAGE</h2> -->
+    <script src="script.js"></script>
+    <script></script>
+</body>
+
+</html>

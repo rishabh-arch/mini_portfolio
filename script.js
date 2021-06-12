@@ -11,6 +11,7 @@ document.onmousemove = function () {
     balls[i].style.transform = "translate(-" + x + ",-" + y + ")";
   }
 }
+
 let toggle = document.getElementById('toggle');
 let toggle_label = document.getElementById('toggle_label');
 
@@ -25,6 +26,7 @@ function toggleUnChecked(){
 }
 
 const buddha_svg = document.getElementById('buddha_svg');
+
 const toggleBtn = document.getElementById('toggle-btn');
 
 buddha_svg.classList.replace('buddha_svg_top', 'buddha_svg_top_Active');
